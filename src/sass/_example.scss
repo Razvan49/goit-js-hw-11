@@ -1,21 +1,44 @@
 body {
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Roboto, sans-serif;
 }
 
 .search-form {
+  width: 100%;
   text-align: center;
-  margin: 20px;
+  margin-bottom: 20px;
+  background-color: skyblue;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-input[type='text'] {
+.form__input {
   padding: 10px;
   width: 300px;
   font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  &:hover,
+  &:focus {
+    outline: none;
+  }
 }
 
-button {
+.form__button {
+  border-radius: 20px;
+  border: none;
+  background-color: white;
   padding: 10px 20px;
   font-size: 16px;
+  &:hover,
+  &:focus {
+    background: darken($color: #a4d1f6, $amount: 15);
+    transition-duration: 250ms;
+    color: white;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .gallery {
@@ -25,19 +48,46 @@ button {
 }
 
 .photo-card {
+  border-radius: 20px;
   margin: 10px;
   border: 1px solid #ccc;
   padding: 10px;
   width: 300px;
   text-align: center;
+  &:hover,
+  &:focus {
+    background: darken($color: #a4d1f6, $amount: 15);
+    transition-duration: 250ms;
+    color: white;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.image {
+  border-radius: 20px;
+  object-fit: cover;
+  width: 280px;
+  height: 200;
 }
 
 .load-more {
   display: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  text-align: center;
+  color: blacks;
+  align-items: center;
+  cursor: pointer;
+  width: 200px;
   margin: 20px;
+  background-color: skyblue;
+  border: none;
+  &:hover,
+  &:focus {
+    background: darken($color: #a4d1f6, $amount: 15);
+    transition-duration: 250ms;
+    color: white;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
